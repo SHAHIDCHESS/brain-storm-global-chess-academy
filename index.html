@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Brain Storm Global Chess Academy — expert coaching by FIDE Rated Chess Coaches with 20+ years of experience." />
+  <title>Brain Storm Global Chess Academy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root { --ink:#102418; --forest:#16402d; --green:#1f6b47; --mint:#d8edcf; --cream:#f8f4e9; --gold:#e6b84b; --white:#fffdf8; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; color:var(--ink); background:var(--cream); font-family:"DM Sans",sans-serif; }
+    a { color:inherit; text-decoration:none; }
+    .wrap { width:min(1140px, calc(100% - 40px)); margin:auto; }
+    header { position:absolute; inset:0 0 auto; z-index:3; color:#fff; }
+    nav { height:88px; display:flex; align-items:center; justify-content:space-between; gap:24px; }
+    .brand { display:flex; align-items:center; gap:11px; font-weight:700; line-height:1.05; letter-spacing:.01em; }
+    .brand-mark { display:grid; place-items:center; width:39px; height:39px; color:var(--forest); background:var(--gold); border-radius:50%; font-size:21px; box-shadow:inset 0 0 0 3px #f5d576; }
+    .navlinks { display:flex; gap:27px; align-items:center; font-size:.91rem; font-weight:600; }
+    .navlinks a:hover { color:var(--gold); }
+    .small-btn, .btn { display:inline-flex; align-items:center; justify-content:center; font-weight:700; border-radius:999px; transition:.2s ease; }
+    .small-btn { padding:10px 17px; border:1px solid rgba(255,255,255,.65); }
+    .small-btn:hover { background:#fff; color:var(--forest); }
+    .hero { position:relative; overflow:hidden; min-height:710px; padding:150px 0 75px; color:#fff; background:radial-gradient(circle at 74% 36%,#306e4d 0 8%,transparent 30%), linear-gradient(125deg,#092217 0%,#16402d 55%,#113722 100%); }
+    .hero:before { content:""; position:absolute; right:-10vw; bottom:-210px; width:710px; height:710px; opacity:.29; transform:rotate(-8deg); background:conic-gradient(from 45deg,#f3e9c5 0 25%,transparent 0 50%,#f3e9c5 0 75%,transparent 0) 0 0/92px 92px; mask-image:radial-gradient(circle,black 24%,transparent 70%); }
+    .hero-grid { position:relative; z-index:1; display:grid; grid-template-columns:1.05fr .95fr; align-items:center; gap:45px; }
+    .eyebrow { margin:0 0 16px; color:#f3cd6b; font-size:.76rem; font-weight:700; letter-spacing:.16em; text-transform:uppercase; }
+    h1,h2 { font-family:"Playfair Display",serif; }
+    h1 { max-width:680px; margin:0; font-size:clamp(3rem,6.2vw,5.6rem); line-height:.98; letter-spacing:-.045em; }
+    h1 em { color:var(--gold); font-style:normal; }
+    .hero-copy { max-width:550px; margin:25px 0 31px; color:#e0ecdf; font-size:1.1rem; line-height:1.7; }
+    .hero-actions { display:flex; gap:13px; flex-wrap:wrap; }
+    .btn { min-height:50px; padding:0 24px; border:1px solid transparent; cursor:pointer; font-size:.95rem; }
+    .btn.gold { color:#172b1f; background:var(--gold); box-shadow:0 10px 25px rgba(0,0,0,.16); }
+    .btn.gold:hover { transform:translateY(-2px); background:#f4cb61; }
+    .btn.outline { border-color:rgba(255,255,255,.6); }
+    .btn.outline:hover { background:#fff; color:var(--forest); }
+    .hero-card { position:relative; width:min(100%,420px); justify-self:end; padding:32px; background:rgba(248,244,233,.98); color:var(--ink); border-radius:4px 4px 46px 4px; box-shadow:0 22px 45px rgba(0,0,0,.26); }
+    .hero-card:before { content:"♞"; position:absolute; right:22px; top:-56px; color:var(--gold); font-size:102px; line-height:1; text-shadow:0 12px 22px rgba(0,0,0,.28); }
+    .hero-card .top { display:flex; justify-content:space-between; align-items:start; margin-bottom:29px; }
+    .badge { color:var(--forest); font-size:.72rem; font-weight:700; letter-spacing:.09em; text-transform:uppercase; }
+    .rating { color:var(--gold); font-size:1.1rem; letter-spacing:2px; }
+    .hero-card h3 { margin:0 0 11px; font-family:"Playfair Display",serif; font-size:1.75rem; line-height:1.1; }
+    .hero-card p { margin:0; color:#557060; line-height:1.6; }
+    .stats { position:absolute; bottom:0; left:0; right:0; transform:translateY(50%); z-index:2; }
+    .stats-grid { display:grid; grid-template-columns:repeat(3,1fr); background:var(--white); color:var(--ink); border-radius:5px; box-shadow:0 18px 34px rgba(25,53,34,.16); }
+    .stat { padding:27px 30px; border-right:1px solid #e6e4da; }
+    .stat:last-child { border:0; }
+    .stat strong { display:block; color:var(--green); font-family:"Playfair Display",serif; font-size:1.65rem; }
+    .stat span { font-size:.86rem; color:#667468; }
+    section { padding:125px 0; }
+    .intro { padding-bottom:75px; }
+    .section-grid { display:grid; grid-template-columns:.85fr 1.15fr; gap:95px; align-items:center; }
+    h2 { margin:0 0 16px; font-size:clamp(2.2rem,4vw,3.5rem); letter-spacing:-.035em; line-height:1.1; }
+    .lead { color:#526658; line-height:1.75; font-size:1.04rem; }
+    .features { display:grid; grid-template-columns:repeat(2,1fr); gap:17px; }
+    .feature { padding:25px; background:#fffdf8; border:1px solid #e7e3d8; border-radius:4px; }
+    .feature-icon { display:grid; place-items:center; width:42px; height:42px; margin-bottom:20px; border-radius:50%; color:var(--forest); background:var(--mint); font-size:1.3rem; }
+    .feature h3 { margin:0 0 8px; font-size:1rem; }
+    .feature p { margin:0; color:#657466; font-size:.9rem; line-height:1.55; }
+    .journey { background:var(--mint); padding:92px 0; }
+    .journey-head { display:flex; justify-content:space-between; align-items:end; gap:30px; margin-bottom:42px; }
+    .journey-head .lead { max-width:475px; margin:0; }
+    .steps { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+    .step { padding:27px; background:rgba(255,253,248,.72); border-top:3px solid var(--gold); }
+    .num { color:var(--green); font-family:"Playfair Display",serif; font-size:2.4rem; }
+    .step h3 { margin:13px 0 8px; font-size:1.05rem; }
+    .step p { margin:0; color:#587060; line-height:1.55; font-size:.91rem; }
+    .contact { background:var(--forest); color:#fff; }
+    .contact-grid { display:grid; grid-template-columns:.75fr 1.25fr; gap:75px; align-items:start; }
+    .contact .eyebrow { color:var(--gold); }
+    .contact h2 { max-width:350px; }
+    .contact .lead { color:#c8dccc; }
+    .contact-info { margin-top:34px; display:grid; gap:13px; font-size:.94rem; }
+    .contact-info a { color:#fff; text-decoration:underline; text-decoration-color:var(--gold); text-underline-offset:4px; }
+    form { display:grid; grid-template-columns:1fr 1fr; gap:15px; padding:30px; background:#fffdf8; color:var(--ink); border-radius:4px; }
+    .field.full { grid-column:1/-1; }
+    label { display:block; margin-bottom:7px; color:#4a5c4e; font-size:.76rem; font-weight:700; letter-spacing:.05em; text-transform:uppercase; }
+    input,select,textarea { width:100%; border:1px solid #d9ded5; background:#fff; border-radius:3px; padding:13px; color:var(--ink); font:inherit; outline:none; }
+    textarea { min-height:95px; resize:vertical; }
+    input:focus,select:focus,textarea:focus { border-color:var(--green); box-shadow:0 0 0 3px rgba(31,107,71,.12); }
+    form .btn { width:max-content; }
+    .form-note { grid-column:1/-1; margin:0; color:#667468; font-size:.78rem; line-height:1.45; }
+    footer { padding:28px 0; background:#0b2115; color:#b9ccbc; font-size:.83rem; }
+    .footer-inner { display:flex; justify-content:space-between; gap:20px; }
+    .whatsapp { position:fixed; right:23px; bottom:22px; z-index:4; display:grid; place-items:center; width:55px; height:55px; border-radius:50%; background:#25d366; color:#fff; font-weight:800; font-size:24px; box-shadow:0 7px 20px rgba(0,0,0,.25); }
+    .whatsapp:hover { transform:scale(1.06); }
+    @media (max-width:760px) { .navlinks { display:none; } .hero { min-height:auto; padding:128px 0 140px; } .hero-grid,.section-grid,.contact-grid { grid-template-columns:1fr; } .hero-card { display:none; } .stats { transform:translateY(45%); } .stats-grid { grid-template-columns:1fr; } .stat { padding:17px 20px; border-right:0; border-bottom:1px solid #e6e4da; } .stat:last-child { border-bottom:0; } section { padding:100px 0; } .intro { padding-bottom:60px; } .section-grid { gap:35px; } .features,.steps { grid-template-columns:1fr; } .journey-head { display:block; } .journey-head .lead { margin-top:15px; } .contact-grid { gap:35px; } form { grid-template-columns:1fr; padding:22px; } .field.full { grid-column:auto; } .footer-inner { display:block; } .footer-inner p + p { margin-top:10px; } }
+  </style>
+</head>
+<body>
+  <header><nav class="wrap"><a class="brand" href="#home"><span class="brand-mark">♞</span><span>Brain Storm Global<br>Chess Academy</span></a><div class="navlinks"><a href="#about">Why Us</a><a href="#journey">Learning Path</a><a href="#contact">Contact</a><a class="small-btn" href="https://wa.me/919870786838" target="_blank" rel="noopener">WhatsApp Us</a></div></nav></header>
+  <main>
+    <section class="hero" id="home"><div class="wrap hero-grid"><div><p class="eyebrow">Think deeper. Play stronger.</p><h1>Every move<br>builds a <em>mind.</em></h1><p class="hero-copy">Structured chess coaching for curious beginners and ambitious competitors, led by FIDE Rated Chess Coaches with over 20 years of experience.</p><div class="hero-actions"><a class="btn gold" href="#contact">Enquire for Admission</a><a class="btn outline" href="https://wa.me/919870786838" target="_blank" rel="noopener">Chat on WhatsApp ↗</a></div></div><aside class="hero-card"><div class="top"><span class="badge">Expert-led coaching</span><span class="rating">★★★★★</span></div><h3>Learn the game.<br>Master the strategy.</h3><p>Build confidence, concentration, and competitive thinking—one thoughtful move at a time.</p></aside></div></section>
+    <div class="stats"><div class="wrap stats-grid"><div class="stat"><strong>20+ Years</strong><span>Coaching experience</span></div><div class="stat"><strong>FIDE Rated</strong><span>Professional chess coaches</span></div><div class="stat"><strong>All Levels</strong><span>Beginners to competitors</span></div></div></div>
+    <section class="intro" id="about"><div class="wrap section-grid"><div><p class="eyebrow" style="color:var(--green)">The academy</p><h2>A sharper way to learn chess.</h2><p class="lead">At Brain Storm Global Chess Academy, we make every session purposeful. Our coaching blends strong fundamentals, practical strategy, and the personal attention each student needs to grow.</p></div><div class="features"><article class="feature"><div class="feature-icon">♟</div><h3>FIDE Rated Coaches</h3><p>Learn with mentors who understand the competitive game from the inside out.</p></article><article class="feature"><div class="feature-icon">◎</div><h3>Strong Foundations</h3><p>Develop calculation, opening principles, tactics, and confident decision-making.</p></article><article class="feature"><div class="feature-icon">⌁</div><h3>Personal Growth</h3><p>A considered pace and clear feedback help every student make real progress.</p></article><article class="feature"><div class="feature-icon">♛</div><h3>Competitive Edge</h3><p>Prepare to think under pressure and approach every game with a plan.</p></article></div></div></section>
+    <section class="journey" id="journey"><div class="wrap"><div class="journey-head"><div><p class="eyebrow" style="color:var(--green)">A clear path forward</p><h2>From first move to smart move.</h2></div><p class="lead">Our lessons meet students where they are, then guide them toward their next meaningful challenge.</p></div><div class="steps"><article class="step"><div class="num">01</div><h3>Build the base</h3><p>Learn the board, pieces, rules, and essential habits through engaging instruction.</p></article><article class="step"><div class="num">02</div><h3>Train the mind</h3><p>Practise tactics, calculation, planning, and positional understanding in a supportive setting.</p></article><article class="step"><div class="num">03</div><h3>Play with purpose</h3><p>Put your skills to work with guided games, analysis, and competitive preparation.</p></article></div></div></section>
+    <section class="contact" id="contact"><div class="wrap contact-grid"><div><p class="eyebrow">Admissions & enquiries</p><h2>Make the next move.</h2><p class="lead">Tell us a little about the learner and we’ll help you find the right place to begin.</p><div class="contact-info"><span>WhatsApp: <a href="https://wa.me/919870786838" target="_blank" rel="noopener">+91 98707 86838</a></span><span>Email: <a href="mailto:BrainStormGlobalChess@gmail.com">BrainStormGlobalChess@gmail.com</a></span></div></div><form id="enquiry-form"><div class="field"><label for="name">Parent / Student Name</label><input id="name" name="name" required placeholder="Your name" /></div><div class="field"><label for="phone">Phone Number</label><input id="phone" name="phone" type="tel" required placeholder="Your number" /></div><div class="field"><label for="age">Student Age</label><input id="age" name="age" type="number" min="4" max="99" placeholder="Age" /></div><div class="field"><label for="level">Current Level</label><select id="level" name="level"><option>Beginner</option><option>Intermediate</option><option>Advanced</option><option>Not sure yet</option></select></div><div class="field full"><label for="message">Your Enquiry</label><textarea id="message" name="message" placeholder="Tell us what you would like to know..."></textarea></div><button class="btn gold field full" type="submit">Send Enquiry on WhatsApp ↗</button><p class="form-note">Submitting opens WhatsApp with your enquiry prefilled. We’ll get back to you as soon as possible.</p></form></div></section>
+  </main>
+  <footer><div class="wrap footer-inner"><p>© 2026 Brain Storm Global Chess Academy</p><p>Think deeper. Play stronger.</p></div></footer>
+  <a class="whatsapp" href="https://wa.me/919870786838" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">◔</a>
+  <script>
+    document.getElementById('enquiry-form').addEventListener('submit', function (event) {
+      event.preventDefault();
+      const info = new FormData(this);
+      const message = `Hello Brain Storm Global Chess Academy!%0A%0AI would like to enquire about admission.%0A%0AName: ${encodeURIComponent(info.get('name'))}%0APhone: ${encodeURIComponent(info.get('phone'))}%0AAge: ${encodeURIComponent(info.get('age') || 'Not provided')}%0AChess level: ${encodeURIComponent(info.get('level'))}%0AEnquiry: ${encodeURIComponent(info.get('message') || 'Not provided')}`;
+      window.open(`https://wa.me/919870786838?text=${message}`, '_blank', 'noopener');
+    });
+  </script>
+</body>
+</html>
